@@ -1,0 +1,43 @@
+<section data-ng-controller="CandidatesController">
+    <div class="page-header">
+        <h1>New Candidate</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label" for="name">DOB</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="dob" id="dob" class="form-control" placeholder="Date of Birth" required>
+                    </div>
+
+                    <label class="control-label" for="name">Party</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="party" id="party" class="form-control" placeholder="Party" required>
+                    </div>
+
+                    <label class="control-label" for="name">Province</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="province" id="province" class="form-control" placeholder="Province" required>
+                    </div>
+
+                     <label class="control-label" for="name">Motivation</label>
+                    <div class="controls">
+                        <textarea data-ng-model="motivation" id="motivation" class="form-control" placeholder="motivation" required></textarea>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
